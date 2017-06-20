@@ -1,10 +1,9 @@
-package com.automationpractice.bdd.bdd.page;
+package com.automationpractice.bdd.page;
 
+import com.automationpractice.bdd.selenium.BddSeleniumRunner;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-
-import static com.automationpractice.bdd.bdd.selenium.BddSeleniumRunner.driver;
 
 public class MainPage {
 
@@ -12,11 +11,11 @@ public class MainPage {
     private WebElement account;
 
     public MainPage() {
-        PageFactory.initElements(driver, this);
+        PageFactory.initElements(BddSeleniumRunner.driver, this);
     }
 
     public MainPage goToMainPage() {
-        driver.get("http://www.store.demoqa.com");
+        BddSeleniumRunner.driver.get("http://www.store.demoqa.com");
         return this;
     }
 

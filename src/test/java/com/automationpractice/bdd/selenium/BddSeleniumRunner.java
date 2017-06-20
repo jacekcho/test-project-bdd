@@ -1,4 +1,4 @@
-package com.automationpractice.bdd.bdd.selenium;
+package com.automationpractice.bdd.selenium;
 
 import com.automationpractice.utils.ChromeBrowser;
 import cucumber.api.java.After;

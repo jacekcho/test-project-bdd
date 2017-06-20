@@ -1,11 +1,11 @@
-package com.automationpractice.bdd.bdd.page;
+package com.automationpractice.bdd.page;
 
-import com.automationpractice.bdd.bdd.selenium.SeleniumHelper;
+import com.automationpractice.bdd.selenium.SeleniumHelper;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import static com.automationpractice.bdd.bdd.selenium.BddSeleniumRunner.driver;
+import static com.automationpractice.bdd.selenium.BddSeleniumRunner.driver;
 import static org.hamcrest.Matchers.containsString;
 import static org.junit.Assert.assertThat;
 

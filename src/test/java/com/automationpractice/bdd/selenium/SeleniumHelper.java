@@ -1,11 +1,11 @@
-package com.automationpractice.bdd.bdd.selenium;
+package com.automationpractice.bdd.selenium;
 
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import static com.automationpractice.bdd.bdd.selenium.BddSeleniumRunner.driver;
+import static com.automationpractice.bdd.selenium.BddSeleniumRunner.driver;
 
 public class SeleniumHelper {
 
