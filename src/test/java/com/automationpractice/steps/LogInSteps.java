@@ -1,7 +1,7 @@
-package com.automationpractice.bdd.steps;
+package com.automationpractice.steps;
 
-import com.automationpractice.bdd.page.LoginPage;
-import com.automationpractice.bdd.page.MainPage;
+import com.automationpractice.page.LoginPage;
+import com.automationpractice.page.MainPage;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;

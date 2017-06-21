@@ -1,6 +1,7 @@
-package com.automationpractice.bdd.page;
+package com.automationpractice.page;
 
-import com.automationpractice.bdd.selenium.BddSeleniumRunner;
+import com.automationpractice.utils.ChromeBrowser;
+import com.automationpractice.utils.PropertiesManager;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -11,11 +12,11 @@ public class MainPage {
     private WebElement account;
 
     public MainPage() {
-        PageFactory.initElements(BddSeleniumRunner.driver, this);
+        PageFactory.initElements(ChromeBrowser.getDriver(), this);
     }
 
     public MainPage goToMainPage() {
-        BddSeleniumRunner.driver.get("http://www.store.demoqa.com");
+        ChromeBrowser.getDriver().get(PropertiesManager.getInstance().getDemoqaUrl());
         return this;
     }
 

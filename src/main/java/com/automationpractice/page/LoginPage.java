@@ -1,11 +1,12 @@
-package com.automationpractice.bdd.page;
+package com.automationpractice.page;
 
-import com.automationpractice.bdd.selenium.SeleniumHelper;
+import com.automationpractice.utils.ChromeBrowser;
+import com.automationpractice.utils.PropertiesManager;
+import com.automationpractice.utils.SeleniumHelper;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import static com.automationpractice.bdd.selenium.BddSeleniumRunner.driver;
 import static org.hamcrest.Matchers.containsString;
 import static org.junit.Assert.assertThat;
 
@@ -37,7 +38,7 @@ public class LoginPage {
     private final String INVALID_CREDENTIAL = "ERROR: Invalid login credentials";
 
     public LoginPage() {
-        PageFactory.initElements(driver, this);
+        PageFactory.initElements(ChromeBrowser.getDriver(), this);
     }
 
     public LoginPage checkLoggedUserName(String userLogin) {
@@ -61,8 +62,9 @@ public class LoginPage {
     }
 
     public LoginPage logInDefaultUser() {
-        enterLogin("jacektest");
-        enterPassword("QW12qw12");
+        PropertiesManager properties = PropertiesManager.getInstance();
+        enterLogin(properties.getLogin());
+        enterPassword(properties.getPassword());
         submitLogIn();
         return this;
     }
