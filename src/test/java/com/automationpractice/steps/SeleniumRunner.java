@@ -1,4 +1,4 @@
-package com.automationpractice.runner;
+package com.automationpractice.steps;
 
 import com.automationpractice.utils.ChromeBrowser;
 import cucumber.api.java.After;

@@ -1,4 +1,4 @@
-package com.automationpractice.runner;
+package com.automationpractice.steps;
 
 
 import cucumber.api.CucumberOptions;

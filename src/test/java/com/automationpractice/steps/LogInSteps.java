@@ -1,4 +1,4 @@
-package com.automationpractice.runner;
+package com.automationpractice.steps;
 
 import com.automationpractice.pages.LoginPage;
 import com.automationpractice.pages.MainPage;
