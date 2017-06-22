@@ -4,7 +4,7 @@ import com.automationpractice.utils.ChromeBrowser;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
 
-public class BddSeleniumRunner {
+public class SeleniumRunner {
 
     @Before
     public void executeBeforeScenario() {
