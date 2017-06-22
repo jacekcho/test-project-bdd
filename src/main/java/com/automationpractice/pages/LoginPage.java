@@ -1,4 +1,4 @@
-package com.automationpractice.page;
+package com.automationpractice.pages;
 
 import com.automationpractice.utils.ChromeBrowser;
 import com.automationpractice.utils.PropertiesManager;
