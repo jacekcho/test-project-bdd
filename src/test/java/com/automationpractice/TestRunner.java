@@ -1,5 +1,4 @@
-package com.automationpractice.steps;
-
+package com.automationpractice;
 
 import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
