@@ -6,7 +6,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import java.util.concurrent.TimeUnit;
 import java.util.logging.Level;
 
-public class ChromeBrowser {
+public class DriverFactory {
 
     private static ChromeDriver driver;
 

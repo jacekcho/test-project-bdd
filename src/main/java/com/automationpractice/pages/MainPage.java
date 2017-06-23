@@ -1,6 +1,6 @@
 package com.automationpractice.pages;
 
-import com.automationpractice.utils.ChromeBrowser;
+import com.automationpractice.utils.DriverFactory;
 import com.automationpractice.utils.PropertiesManager;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -12,11 +12,11 @@ public class MainPage {
     private WebElement account;
 
     public MainPage() {
-        PageFactory.initElements(ChromeBrowser.getDriver(), this);
+        PageFactory.initElements(DriverFactory.getDriver(), this);
     }
 
     public MainPage goToMainPage() {
-        ChromeBrowser.getDriver().get(PropertiesManager.getInstance().getDemoqaUrl());
+        DriverFactory.getDriver().get(PropertiesManager.getInstance().getDemoqaUrl());
         return this;
     }
 

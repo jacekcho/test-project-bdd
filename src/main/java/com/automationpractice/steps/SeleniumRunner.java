@@ -1,6 +1,6 @@
 package com.automationpractice.steps;
 
-import com.automationpractice.utils.ChromeBrowser;
+import com.automationpractice.utils.DriverFactory;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
 
@@ -17,12 +17,12 @@ public class SeleniumRunner {
     }
 
     private void createDriver() {
-        new ChromeBrowser().createDriver();
+        new DriverFactory().createDriver();
     }
 
     private void closeDriver() {
-        if (ChromeBrowser.getDriver() != null) {
-            ChromeBrowser.getDriver().quit();
+        if (DriverFactory.getDriver() != null) {
+            DriverFactory.getDriver().quit();
         }
     }
 }

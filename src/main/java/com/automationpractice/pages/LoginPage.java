@@ -1,8 +1,8 @@
 package com.automationpractice.pages;
 
-import com.automationpractice.utils.ChromeBrowser;
+import com.automationpractice.utils.DriverFactory;
 import com.automationpractice.utils.PropertiesManager;
-import com.automationpractice.utils.SeleniumHelper;
+import com.automationpractice.utils.TestHelper;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -38,7 +38,7 @@ public class LoginPage {
     private final String INVALID_CREDENTIAL = "ERROR: Invalid login credentials";
 
     public LoginPage() {
-        PageFactory.initElements(ChromeBrowser.getDriver(), this);
+        PageFactory.initElements(DriverFactory.getDriver(), this);
     }
 
     public LoginPage checkLoggedUserName(String userLogin) {
@@ -75,13 +75,13 @@ public class LoginPage {
     }
 
     public LoginPage getLogoutConfirmation() {
-        SeleniumHelper.waitForAjax();
+        TestHelper.waitForAjax();
         assertThat(myAccountInput.getText(), containsString(LOGOUT_CONFIRMATION));
         return this;
     }
 
     public LoginPage getInvalidCredentatialConfirmation() {
-        SeleniumHelper.waitForAjax();
+        TestHelper.waitForAjax();
         assertThat(invalidCredentialMessage.getText(), containsString(INVALID_CREDENTIAL));
         return this;
     }
